@@ -6,7 +6,6 @@ module.exports = function solveSudoku(matrix) {
             for (var j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] === 0) {
                     emptyPosition.push([i, j]);
-                    console.log(emptyPosition);
                 }
             }
         }
@@ -66,7 +65,6 @@ module.exports = function solveSudoku(matrix) {
         }
     }
     saveEmptyPositions(matrix);
-    console.log(emptyPosition);
     var limit = 9;
     var i, row, colum, value, found;
     for (i = 0; i < emptyPosition.length;) {
